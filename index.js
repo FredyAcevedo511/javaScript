@@ -11,18 +11,32 @@ let seguirComprando = true
 let totalCompra = 0
 let decision
 
+class NewProduct{
+    constructor(id, name, price, stock){
+        this.id = id
+        this.name = name
+        this.price = price
+        this.stock = stock
+    }
+}
+
+const iphone = new NewProduct (1,'iphone', 600, 20)
+const tv = new NewProduct (2,'tv', 1000, 40)
+const ipad = new NewProduct (3,'ipad', 200, 30)
+const computador = new NewProduct (4,'computador', 800, 15)
+
 while (seguirComprando===true){
-    if(producto===1){
-        totalCompra = totalCompra + 600
+    if(producto===iphone.id){
+        totalCompra = totalCompra + iphone.price
         console.log(`El total de la compra es ${totalCompra}`);
-    } else if(producto===2){
-        totalCompra = totalCompra + 1000
+    } else if(producto===tv.id){
+        totalCompra = totalCompra + tv.price
         console.log(`El total de la compra es ${totalCompra}`);
-    } else if(producto===3){
-        totalCompra = totalCompra + 200
+    } else if(producto===ipad.id){
+        totalCompra = totalCompra + ipad.price
         console.log(`El total de la compra es ${totalCompra}`);
-    }else if(producto===4){
-        totalCompra = totalCompra + 800
+    }else if(producto===computador.id){
+        totalCompra = totalCompra + computador.price
         console.log(`El total de la compra es ${totalCompra}`);
     }
 
